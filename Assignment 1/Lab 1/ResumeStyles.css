@@ -1,0 +1,65 @@
+
+/* This file is for the stylying using css for Lab 1 */
+
+
+/*Style of body*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/*Styling the Name Section*/
+.name-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.name-container i {
+    font-size: 36px; /* Name font size */
+    font-weight: bold; /* Bolds */
+}
+
+/*Styles the image into a oval shape*/
+.name-container img {
+    border-radius: 50%;
+}
+
+/*Section Titles*/
+h2 {
+    font-family: "Times New Roman", serif;
+    border-bottom: 2px solid black; /* For line across screen */
+    padding-bottom: 5px;
+}
+
+/*Work Experience List*/
+ul {
+    list-style-type: square;
+}
+
+/*Ordered List Styling*/
+ol {
+    padding-left: 20px;
+}
+
+/*Stylying for Footer*/
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+}
+
+/* For when cursor goes on text */
+footer a:hover {
+    color: #FFA500; /* Colour on hover */
+    text-decoration: underline; /* Underlines when hovering */
+}
