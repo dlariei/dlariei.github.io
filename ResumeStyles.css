@@ -1,65 +1,218 @@
-
-/* This file is for the stylying using css for Lab 1 */
-
-
-/*Style of body*/
-body {
-    font-family: Arial, sans-serif;
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 40px;
     padding: 20px;
     line-height: 1.6;
     background-color: #f4f4f4;
-}
-
-/*Styling the Name Section*/
-.name-container {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark theme styles */
+  body.dark-theme {
+    background-color: #121212;
+    color: #e4e4e4;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    position: top;
+    top: 0;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+  
+  body.dark-theme .navbar {
+    background-color: #1e1e1e;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    color: #FFA500;
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .resume-btn {
+    text-decoration: none;
+    background-color: #FFA500;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .resume-btn:hover {
+    background-color: #e59400;
+  }
+  
+  #theme-toggle {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Name Section */
+  .name-container {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.name-container i {
-    font-size: 36px; /* Name font size */
-    font-weight: bold; /* Bolds */
-}
-
-/*Styles the image into a oval shape*/
-.name-container img {
+    margin-bottom: 40px;
+  }
+  
+  .name-container i {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .name-container img {
     border-radius: 50%;
-}
-
-/*Section Titles*/
-h2 {
+  }
+  
+  /* Section Titles */
+  h2 {
     font-family: "Times New Roman", serif;
-    border-bottom: 2px solid black; /* For line across screen */
+    border-bottom: 2px solid black;
     padding-bottom: 5px;
-}
-
-/*Work Experience List*/
-ul {
+    margin-top: 40px;
+  }
+  
+  /* Lists */
+  ul {
     list-style-type: square;
-}
-
-/*Ordered List Styling*/
-ol {
+    margin-left: 20px;
+  }
+  
+  ol {
     padding-left: 20px;
-}
-
-/*Stylying for Footer*/
-footer {
+  }
+  
+  /* Contact Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #e59400;
+  }
+  
+  /* Fade-in animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Back-to-top button */
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+    z-index: 1000;
+  }
+  
+  #back-to-top:hover {
+    background-color: #e59400;
+  }
+  
+  /* Footer */
+  footer {
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
-}
-
-footer a {
+    margin-top: 40px;
+  }
+  
+  footer a {
     color: #000000;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
     font-weight: bold;
-}
-
-/* For when cursor goes on text */
-footer a:hover {
-    color: #FFA500; /* Colour on hover */
-    text-decoration: underline; /* Underlines when hovering */
-}
+  }
+  
+  footer a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+  }
